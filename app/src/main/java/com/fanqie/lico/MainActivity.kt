@@ -230,7 +230,8 @@ class MainActivity : AppCompatActivity() {
             gravity = Gravity.CENTER
             setPadding(dp(24), dp(24), dp(24), dp(24))
             setBackgroundColor(Color.parseColor("#15151F"))
-            visibility = View.GONE
+            // 默认展示引导页；待权限与目录就绪后由 maybeAutoStart 隐藏
+            visibility = View.VISIBLE
         }
         v.addView(
             TextView(this).apply {
@@ -291,6 +292,12 @@ class MainActivity : AppCompatActivity() {
         dirBtn.text = if (dir != null) "② 下载目录：$dir" else "② 选择下载目录"
         setupStatus.text =
             if (hasPerm && dir != null) "准备就绪，正在启动…" else "完成以上两步后将自动进入应用"
+
+        // 未就绪且未进入主界面时，确保引导页可见（避免只显示标题栏）
+        if (!(hasPerm && dir != null) && !started && webView.visibility != View.VISIBLE) {
+            loadingView.visibility = View.GONE
+            setupView.visibility = View.VISIBLE
+        }
     }
 
     private fun showMenu(anchor: View) {
