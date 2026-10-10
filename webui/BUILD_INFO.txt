@@ -1,0 +1,26 @@
+番茄小说下载器 — Web UI 发布包
+==================================
+版本号    : 2026.10.10
+打包时间  : 2026-10-10 08:43:50 CST
+Node      : v24.20.0
+pnpm      : 12.3.4
+
+--- 构建产物（dist/）---
+  dist/assets/index-DILAmGyV.js                107909 B
+  dist/assets/ConfigView-Bl-Z8N2K.js            12443 B
+  dist/assets/HistoryView-BK-lQEOe.js            9311 B
+  dist/assets/JobsView-S7v2CgUA.js               6787 B
+  dist/assets/LibraryView-Dl-Bof8N.js           15607 B
+  dist/assets/SearchView-BhS9Wro1.js            12262 B
+  dist/assets/StatusView-Dh74TTG4.js             6845 B
+  dist/assets/index-RIsbmawH.css                18618 B
+  dist/index.html                                 637 B
+
+--- 源码统计 ---
+  文件数        : 14
+  总行数        : 4721
+
+--- 后端 API 文档 ---
+  见 API.md（32 条接口表格行）
+
+详细说明见 README.md 与 DEPLOY.md
